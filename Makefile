@@ -1,4 +1,7 @@
-.PHONY: mergeds, pushs, pushd
+.PHONY: d, mergeds, pushs, pushd
+
+d:
+	git checkout development
 
 mergeds:
 	git checkout stable
