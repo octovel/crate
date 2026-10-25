@@ -1,4 +1,4 @@
-.PHONY: d, mergeds, pushs, pushd
+.PHONY: d, mergeds, pushs, pushd, quickbuild
 
 d:
 	git checkout development
@@ -14,3 +14,6 @@ pushs:
 pushd:
 	git push -u github development
 	git push -u codeberg development
+
+quickbuild:
+	@pwsh ./scripts/quickbuild.ps1
