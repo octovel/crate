@@ -1,0 +1,5 @@
+- Make - [https://en.wikipedia.org/wiki/Make_(software)](https://en.wikipedia.org/wiki/Make_(software))
+- Zed - https://zed.dev/
+- Golang - https://go.dev/
+- PowerShell - https://learn.microsoft.com/en-us/powershell/
+- Git - https://git-scm.com/install/windows
