@@ -4,7 +4,7 @@ d:
 	git checkout development
 
 mergeds:
-	git checkout stable
+	git switch stable
 	git merge development
 
 pushs:
