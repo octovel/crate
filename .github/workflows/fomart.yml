@@ -1,0 +1,33 @@
+name: Format
+
+on:
+    push:
+        branches: ["**"]
+        paths:
+            - ".github/workflows/format.yml"
+            - "**/*.go"
+    pull_request:
+        branches: ["**"]
+
+jobs:
+    gofmt:
+        name: Check formatting
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
+
+            - name: Setup Go
+              uses: actions/setup-go@v5
+              with:
+                  go-version-file: go.mod
+
+            - name: Verify formatting
+              run: |
+                  diff=$(gofmt -l .)
+                  if [ -n "$diff" ]; then
+                    echo "Files not formatted:"
+                    echo "$diff"
+                    exit 1
+                  fi
