@@ -6,13 +6,12 @@ import (
 )
 
 type ContextRuntimeBuild struct {
-	Version      string
-	GitCommit    string
-	GitBranch    string
-	Timestamp    string
-	GoVersion    string
-	Architecture string
-	Compiler     string
+	Version   string
+	GitCommit string
+	GitBranch string
+	Timestamp string
+	GoVersion string
+	Compiler  string
 }
 
 type ContextRuntime struct {
