@@ -20,11 +20,6 @@ func NewContext() *models.Context {
 	}
 
 	return &models.Context{
-		Command: models.ContextCommand{
-			Name:      "",
-			Arguments: []string{},
-			Flags:     make(map[string]models.ContextFlag),
-		},
 		Runtime: models.ContextRuntime{
 			WorkingDirectory: cwd,
 			ExecutablePath:   exe,
@@ -32,6 +27,11 @@ func NewContext() *models.Context {
 			GOARCH:           runtime.GOARCH,
 			ProcessID:        os.Getpid(),
 			Timestamp:        time.Now(),
+		},
+		Input: models.ContextInput{
+			Name:      "",
+			Arguments: []string{},
+			Flags:     []models.ContextFlag{},
 		},
 		Stdout: os.Stdout,
 		Stderr: os.Stderr,
