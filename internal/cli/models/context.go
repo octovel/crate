@@ -15,7 +15,7 @@ type Context struct {
 type ContextCommand struct {
 	Name      string
 	Arguments []string
-	Flags     []ContextFlag
+	Flags     map[string]ContextFlag
 }
 
 type ContextRuntime struct {
@@ -24,7 +24,6 @@ type ContextRuntime struct {
 	ExecutablePath   string
 	GOOS             string
 	GOARCH           string
-	OSPlatform       string
 	ProcessID        int
 	Timestamp        time.Time
 }
