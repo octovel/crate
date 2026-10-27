@@ -22,6 +22,8 @@ type ContextRuntime struct {
 	Build            ContextRuntimeBuild
 	WorkingDirectory string
 	ExecutablePath   string
+	GOOS             string
+	GOARCH           string
 	OSPlatform       string
 	ProcessID        int
 	Timestamp        time.Time
