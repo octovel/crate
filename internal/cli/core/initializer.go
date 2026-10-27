@@ -9,6 +9,8 @@ import (
 )
 
 func NewContext() *models.Context {
+	var state models.State
+
 	cwd, err := os.Getwd()
 	if err != nil {
 		cwd = "unknown"
@@ -21,6 +23,14 @@ func NewContext() *models.Context {
 
 	return &models.Context{
 		Runtime: models.ContextRuntime{
+			Build: models.ContextRuntimeBuild{
+				Version:   state.Version,
+				GitCommit: state.GitCommit,
+				GitBranch: state.GitBranch,
+				Timestamp: state.BuildTimestamp,
+				GoVersion: state.GoVersion,
+				Compiler:  state.Compiler,
+			},
 			WorkingDirectory: cwd,
 			ExecutablePath:   exe,
 			GOOS:             runtime.GOOS,
