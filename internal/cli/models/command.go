@@ -18,7 +18,7 @@ type CommandDefinition struct {
 	Validate    func(ctx *Context) error
 }
 
-func (c* CommandDefinition) Execute(ctx* Context) error {
+func (c *CommandDefinition) Execute(ctx *Context) error {
 	if c.Validate != nil {
 		if err := c.Validate(ctx); err != nil {
 			return fmt.Errorf(
