@@ -7,6 +7,12 @@ mergeds:
 	git switch stable
 	git merge development
 
+pushall:
+	make pushd
+	make mergeds
+	make pushs
+	make d
+
 pushs:
 	git push -u github stable
 	git push -u codeberg stable
