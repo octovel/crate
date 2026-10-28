@@ -44,6 +44,7 @@ func NewContext() *models.Context {
 			Arguments:    []string{},
 			RawArguments: os.Args[1:],
 		},
+		State:  state,
 		Stdout: os.Stdout,
 		Stderr: os.Stderr,
 	}
