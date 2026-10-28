@@ -31,9 +31,10 @@ type ContextFlag struct {
 }
 
 type ContextInput struct {
-	Name      string
-	Arguments []string
-	Flags     []ContextFlag
+	Name         string
+	Flags        []ContextFlag
+	Arguments    []string
+	RawArguments []string
 }
 
 type Context struct {
