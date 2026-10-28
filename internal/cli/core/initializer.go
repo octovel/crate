@@ -44,14 +44,6 @@ func NewContext() *models.Context {
 			Arguments:    []string{},
 			RawArguments: os.Args[1:],
 		},
-		State: models.State{
-			Version:        state.Version,
-			GoVersion:      state.GoVersion,
-			GitCommit:      state.GitCommit,
-			GitBranch:      state.GitBranch,
-			BuildTimestamp: state.BuildTimestamp,
-			Compiler:       state.Compiler,
-		},
 		Stdout: os.Stdout,
 		Stderr: os.Stderr,
 	}

@@ -40,7 +40,6 @@ type ContextInput struct {
 type Context struct {
 	Runtime ContextRuntime
 	Input   ContextInput
-	State   State
 	Stdout  io.Writer
 	Stderr  io.Writer
 }
