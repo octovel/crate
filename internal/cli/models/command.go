@@ -4,7 +4,6 @@ import "fmt"
 
 type FlagDefinition struct {
 	Name     string
-	Value    string
 	Boolean  bool
 	Required bool
 }
