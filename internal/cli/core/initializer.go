@@ -39,9 +39,10 @@ func NewContext() *models.Context {
 			Timestamp:        time.Now(),
 		},
 		Input: models.ContextInput{
-			Name:      "",
-			Arguments: []string{},
-			Flags:     []models.ContextFlag{},
+			Name:         "",
+			Flags:        []models.ContextFlag{},
+			Arguments:    []string{},
+			RawArguments: os.Args[1:],
 		},
 		Stdout: os.Stdout,
 		Stderr: os.Stderr,
