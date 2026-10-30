@@ -4,7 +4,7 @@ on:
     push:
         branches: ["**"]
         paths:
-            - ".github/workflows/format.yml"
+            - ".forgejo/workflows/format.yml"
             - "**/*.go"
     pull_request:
         branches: ["**"]
@@ -12,7 +12,7 @@ on:
 jobs:
     gofmt:
         name: Check formatting
-        runs-on: ubuntu-latest
+        runs-on: docker
 
         steps:
             - name: Checkout
