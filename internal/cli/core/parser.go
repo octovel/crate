@@ -31,7 +31,7 @@ func Parse(ctx *models.Context) error {
 				)
 			}
 
-			if name, value, found := strings.Cut(arg, "="); found {
+			if name, value, found := strings.Cut(processed, "="); found {
 				flag := models.ContextFlag{
 					Name:  name,
 					Value: value,
