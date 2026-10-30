@@ -43,3 +43,13 @@ type Context struct {
 	Stdout  io.Writer
 	Stderr  io.Writer
 }
+
+func (c *Context) HasFlag(name string) bool {
+	for _, flag := range c.Input.Flags {
+		if flag.Name == name {
+			return true
+		}
+	}
+
+	return false
+}
