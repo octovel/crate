@@ -59,3 +59,35 @@ func (l *Logger) Err(msg string) {
 		msg,
 	)
 }
+
+func Finf(msg string) string {
+	return fmt.Sprintf("%s[%sinf%s]%s %s",
+		Gray, Blue, Gray,
+		Reset,
+		msg,
+	)
+}
+
+func Fsuc(msg string) string {
+	return fmt.Sprintf("%s[%ssuc%s]%s %s",
+		Gray, Green, Gray,
+		Reset,
+		msg,
+	)
+}
+
+func Fwrn(msg string) string {
+	return fmt.Sprintf("%s[%swrn%s]%s %s",
+		Gray, Yellow, Gray,
+		Reset,
+		msg,
+	)
+}
+
+func Ferr(msg string) string {
+	return fmt.Sprintf("%s[%serr%s]%s %s",
+		Gray, Red, Gray,
+		Reset,
+		msg,
+	)
+}
