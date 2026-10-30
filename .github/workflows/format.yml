@@ -4,7 +4,7 @@ on:
     push:
         branches: ["**"]
         paths:
-            - ".forgejo/workflows/format.yml"
+            - ".github/workflows/format.yml"
             - "**/*.go"
     pull_request:
         branches: ["**"]
