@@ -53,3 +53,13 @@ func (c *Context) HasFlag(name string) bool {
 
 	return false
 }
+
+func (c *Context) GetFlag(name string) *ContextFlag {
+	for i, flag := range c.Input.Flags {
+		if flag.Name == name {
+			return &c.Input.Flags[i]
+		}
+	}
+
+	return nil
+}
