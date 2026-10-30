@@ -12,7 +12,7 @@ on:
 jobs:
     gofmt:
         name: Check formatting
-        runs-on: docker
+        runs-on: ubuntu-latest
 
         steps:
             - name: Checkout
